@@ -1,40 +1,60 @@
-# Cliff — Personal Portfolio
+# BetrandCliff — Personal Portfolio
 
-A sophisticated, editorial-tech personal portfolio built with Next.js App Router, TypeScript, Framer Motion and Lucide.
+A personal portfolio for **Sakwe BetrandCliff**, showcasing selected software projects, engineering capabilities, and professional background. The site pairs an editorial visual style with responsive layouts and subtle motion.
 
-## Design direction
+## Built with
 
-The interface is intentionally not a conventional developer portfolio. It combines:
+- [Next.js](https://nextjs.org/) App Router and React
+- TypeScript
+- Framer Motion for transitions and scroll reveals
+- Lucide for interface icons
+- CSS for layout, responsive styling, and visual effects
 
-- editorial typography
-- technical grid language
-- oversized kinetic headings
-- restrained monochrome surfaces with one electric accent
-- scroll-triggered reveals
-- magnetic-style interaction cues
-- project case-study cards
-- a timeline for the user's journey
-- a responsive mobile navigation
+## Getting started
 
-## Run locally
+### Prerequisites
+
+- Node.js 20.9 or later
+- npm
+
+### Install and run
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open `http://localhost:3000`.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Customize
+## Available commands
 
-The main personal content lives in `data/portfolio.ts`.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local development server |
+| `npm run build` | Create a production build |
+| `npm run start` | Serve the production build locally |
+| `npm run lint` | Run ESLint |
 
-Update:
-- name / role
-- social links
-- project details
-- experience / education
-- services
-- contact email
+## Project structure
 
-No backend is required for the current contact form: it opens the user's email client. A real email API can be connected later.
+```text
+app/                 Pages, layout, and global styles
+app/work/[slug]/     Project case-study pages
+components/          Navigation, project cards, and reveal animation
+data/portfolio.ts    Profile, social links, capabilities, and project content
+public/              Static assets
+```
+
+## Updating portfolio content
+
+Edit [`data/portfolio.ts`](data/portfolio.ts) to update the profile, email address, social profile URLs, capabilities, project descriptions, and timeline. Project detail pages use the project slugs defined in that file.
+
+The contact page sends a visitor’s name, email, subject, and message directly to BetrandCliff through Resend. Set `RESEND_API_KEY` and `RESEND_FROM_EMAIL` in `.env.local` and in the deployment environment. The sender address must belong to a domain verified with Resend. Update the email and phone details in `data/portfolio.ts` when they change.
+
+## Deployment
+
+Deploy the project to a platform that supports Next.js, such as Vercel. Build the production version with:
+
+```bash
+npm run build
+```
