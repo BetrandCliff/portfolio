@@ -11,7 +11,8 @@ export function Navbar() {
     ["01", "About", "about"],
     ["02", "Work", "work"],
     ["03", "Journey", "journey"],
-    ["04", "Contact", "contact"],
+    ["04", "Education", "education"],
+    ["05", "Contact", "contact"],
   ];
 
   return (

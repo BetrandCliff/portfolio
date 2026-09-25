@@ -109,6 +109,40 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section education-section" id="education">
+        <div className="shell">
+          <Reveal>
+            <div className="section-head">
+              <div>
+                <span className="eyebrow">04 / Education & CV</span>
+                <h2 className="section-title" style={{ marginTop: 22 }}>Learning<br />in progress.</h2>
+              </div>
+              <span className="section-count">ACADEMIC BACKGROUND</span>
+            </div>
+          </Reveal>
+          <div className="education-grid">
+            <Reveal>
+              <article className="education-card">
+                <span className="education-index">01 / EDUCATION</span>
+                <h3>Master&apos;s in Technology</h3>
+                <p>University of Buea</p>
+                <div className="education-divider" />
+                <h3>Bachelor of Technology</h3>
+                <p>University of Bamenda</p>
+              </article>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <article className="education-card cv-card">
+                <span className="education-index">02 / CV</span>
+                <h3>Curriculum vitae</h3>
+                <p>View or download my general software engineering CV.</p>
+                <a className="education-link" href="/cv.pdf" download="Sakwe-BetrandCliff-CV.pdf">Download my CV <ArrowDown size={15} /></a>
+              </article>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       <section className="manifesto">
         <Reveal>
           <div className="manifesto-inner shell">
